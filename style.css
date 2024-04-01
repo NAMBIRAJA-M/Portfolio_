@@ -158,7 +158,7 @@ section {
 
 /* PROFILE SECTION */
 
-#home {
+#profile {
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -327,9 +327,6 @@ section {
 
  }
 
- .details-container{
-
- }
  .experience-sub-title{
   color: rgb(85, 85, 85);
   font-weight: 600;
