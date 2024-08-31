@@ -66,14 +66,12 @@ a:hover {
 
 .hamburger-nav {
   display: none;
+  
 }
 
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
 
 .hamburger-icon {
+ 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
