@@ -89,12 +89,13 @@ a:hover {
 
 .menu-links {
   position: absolute;
-  top: 100%;
-  right: 0;
+/*   top: 100%;
+  left: 10rem; */
   background-color: white;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
+  z-index: 1000;
   transition: all 0.3 ease-in-out;
 }
 
@@ -105,6 +106,7 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
+
   transition: all 0.3 ease-in-out;
 }
 
