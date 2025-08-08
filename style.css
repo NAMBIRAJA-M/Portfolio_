@@ -298,6 +298,7 @@ section {
   border-radius: 2rem;
   border: 1px solid var(--project-border-color);
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .about-containers,
@@ -337,6 +338,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 
  }
 
@@ -367,6 +369,11 @@ section {
 /*PROJECT SECTION*/
 #project{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .color-container{
