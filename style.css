@@ -252,6 +252,7 @@ section {
   cursor: pointer;
   background: var(--text-color);
   color: var(--background-color);
+  transform: scale(1.05);
 }
 
 .btn-color-1 {
@@ -298,7 +299,6 @@ section {
   border-radius: 2rem;
   border: 1px solid var(--project-border-color);
   text-align: center;
-  flex-wrap: wrap;
 }
 
 .about-containers,
@@ -338,7 +338,6 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  flex-wrap: wrap;
 
  }
 
@@ -369,16 +368,16 @@ section {
 /*PROJECT SECTION*/
 #project{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .color-container{
   background-color: var(--project-bg-color);
   border: 1px solid var(--project-border-color);
+  transition: all 300ms ease;
+}
+
+.color-container:hover {
+  transform: scale(1.05);
 }
 .project-img{
   border-radius: 2rem;
@@ -452,5 +451,42 @@ footer{
   cursor: pointer;
 }
 
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
 
 
