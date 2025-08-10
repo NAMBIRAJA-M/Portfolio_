@@ -45,3 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+document.querySelectorAll('.icon').forEach(icon => {
+    icon.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            icon.click();
+        }
+    });
+});

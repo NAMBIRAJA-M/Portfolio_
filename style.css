@@ -164,7 +164,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 10%;
   box-sizing: border-box;
   min-height: fit-content;
   opacity: 0;
@@ -252,7 +252,12 @@ section.visible {
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.social-containers .icon:hover {
+    transform: scale(1.2);
 }
 
 /* BUTTONS */
@@ -273,29 +278,31 @@ section.visible {
 
 .btn-color-1,
 .btn-color-2 {
-  border: 1px solid var(--text-color);
+  border: none;
 }
 
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
-  background: var(--text-color);
-  color: var(--background-color);
   transform: scale(1.05);
 }
 
 .btn-color-1 {
-  background: var(--text-color);
-  color: var(--background-color);
+  background: #3498db; /* Blue */
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: #2980b9;
 }
 
 .btn-color-2 {
-  background: none;
-  color: var(--text-color);
+  background: #2ecc71; /* Green */
+  color: white;
 }
 
 .btn-color-2:hover {
-  border: 1px solid var(--text-color);
+  background: #27ae60;
 }
 
 .btn-container {
@@ -425,6 +432,13 @@ section.visible {
   margin: 1rem;
   color: var(--text-color);
 }
+
+.project-description,
+.project-features,
+.project-tech {
+    margin: 0.5rem;
+    color: var(--secondary-text-color);
+}
 .project-btn{
   color: var(--text-color);
   border-color: var(--text-color);
@@ -461,10 +475,6 @@ section.visible {
 .contact-info-container p{
 font-size: larger;
 }
-.email-icon{
-  height: 2.5rem;
-}
-
 .contact-icon{
   cursor: default;
 }
