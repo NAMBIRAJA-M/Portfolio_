@@ -177,6 +177,29 @@ section.visible {
   transform: translateY(0);
 }
 
+.section-container > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible .section-container > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section.visible .section-container > *:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+section.visible .section-container > *:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+section.visible .section-container > *:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
 .section-container {
   display: flex;
 }
@@ -282,6 +305,7 @@ section.visible {
   background: var(--text-color);
   color: var(--background-color);
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .btn-color-1 {
@@ -396,6 +420,92 @@ section.visible {
 
 
 
+/*EXPERIENCE SECTION*/
+
+#technical-experience {
+    position: relative;
+}
+
+#technical-experience .experience-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#technical-experience .details-containers {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--project-border-color);
+    background: var(--project-bg-color);
+}
+
+#technical-experience .experience-sub-title {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#technical-experience .article-container article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#technical-experience .article-container h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#technical-experience .article-container p {
+    text-align: left;
+    margin-left: 0;
+    color: var(--secondary-text-color);
+}
+
+
+/*SKILLS SECTION*/
+
+#skills {
+    position: relative;
+}
+
+#skills .details-containers {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--project-border-color);
+    background: var(--project-bg-color);
+}
+
+#skills .experience-sub-title {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#skills .article-container {
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+#skills article {
+    width: auto;
+    align-items: center;
+}
+
+#technical-experience .details-containers,
+#skills .details-containers {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#technical-experience .details-containers:hover,
+#skills .details-containers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
 /*PROJECT SECTION*/
 #project{
   position: relative;
@@ -413,7 +523,8 @@ section.visible {
 }
 
 .color-container:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 .project-img{
   border-radius: 2rem;
