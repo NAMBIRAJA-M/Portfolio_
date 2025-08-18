@@ -193,33 +193,65 @@ if (typingText) {
 // Enhanced Button Hover Effects
 document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px) scale(1.05)';
+        this.style.transform = 'translateY(-4px) scale(1.05)';
     });
     
     button.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
     });
+    
+    button.addEventListener('click', function() {
+        this.style.transform = 'translateY(-2px) scale(1.02)';
+        setTimeout(() => {
+            this.style.transform = 'translateY(0) scale(1)';
+        }, 150);
+    });
 });
 
-// Project Card Hover Effects
+// Project Card Hover Effects with Enhanced Interactions
 document.querySelectorAll('.project-card').forEach(card => {
+    const overlay = card.querySelector('.project-overlay');
+    const links = card.querySelectorAll('.project-link');
+    
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px) scale(1.02)';
+        if (overlay) overlay.style.opacity = '1';
+        
+        // Stagger animation for project links
+        links.forEach((link, index) => {
+            setTimeout(() => {
+                link.style.transform = 'scale(1.1) rotate(5deg)';
+            }, index * 100);
+        });
     });
     
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
+        if (overlay) overlay.style.opacity = '0';
+        
+        links.forEach(link => {
+            link.style.transform = 'scale(1) rotate(0deg)';
+        });
     });
 });
 
-// Social Icon Hover Effects
+// Social Icon Hover Effects with Enhanced Animations
 document.querySelectorAll('.social-icon-container').forEach(icon => {
     icon.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-8px) scale(1.15) rotate(5deg)';
+        this.style.transform = 'translateY(-6px) scale(1.1) rotate(5deg)';
+        this.style.boxShadow = '0 12px 30px rgba(59, 130, 246, 0.3)';
     });
     
     icon.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+        this.style.boxShadow = 'none';
+    });
+    
+    icon.addEventListener('click', function() {
+        this.style.transform = 'translateY(-3px) scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = 'translateY(0) scale(1)';
+        }, 150);
     });
 });
 
