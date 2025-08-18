@@ -187,6 +187,30 @@
     width: 10px;
     height: 10px;
   }
+  
+  /* Simplified Footer for Tablet */
+  .footer-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .footer-section nav {
+    margin-bottom: 1.5rem;
+  }
+  
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Mobile Large */
@@ -231,12 +255,14 @@
     width: 200px;
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+    min-height: 48px;
   }
   
   .nav-button {
     width: 180px;
     padding: 0.7rem 1.2rem;
     font-size: 0.85rem;
+    min-height: 44px;
   }
   
   .nav-text {
@@ -323,16 +349,38 @@
     line-height: 1.6;
   }
   
+  /* Simplified Footer for Mobile Large */
   .footer-section {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer-section nav {
+    margin-bottom: 1rem;
   }
   
   .nav-links {
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
   }
   
   .nav-links a {
     font-size: 1rem;
+    padding: 0.8rem 1rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
   }
   
   .logo {
@@ -346,20 +394,21 @@
   .menu-links a {
     font-size: 1.1rem;
     padding: 0.8rem 1.5rem;
+    min-height: 48px;
   }
 }
 
-/* Mobile Small */
+/* Mobile Medium */
 @media screen and (max-width: 480px) {
   .hero-section,
   .about-section,
   .experience-section,
   .projects-section {
-    padding: 2rem 0.8rem;
+    padding: 1.5rem 0.8rem;
   }
   
   .contact-section {
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 0.5rem;
     min-height: 45vh;
   }
   
@@ -375,6 +424,7 @@
   
   .title {
     font-size: 1.8rem;
+    line-height: 1.2;
   }
   
   .section__text_p2 {
@@ -385,12 +435,14 @@
     width: 180px;
     padding: 0.7rem 1.2rem;
     font-size: 0.85rem;
+    min-height: 44px;
   }
   
   .nav-button {
     width: 160px;
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
+    min-height: 40px;
   }
   
   .nav-text {
@@ -499,16 +551,43 @@
     font-size: 0.9rem;
   }
   
+  /* Simplified Footer for Mobile Medium */
   .footer-section {
-    padding: 1.5rem 0.8rem;
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .footer-section nav {
+    margin-bottom: 0.8rem;
   }
   
   .nav-links {
-    gap: 0.8rem;
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: center;
   }
   
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 0.7rem 0.8rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-1px);
+  }
+  
+  .footer-text {
+    margin-top: 1rem;
+    font-size: 0.85rem;
   }
   
   .logo {
@@ -522,6 +601,7 @@
   .menu-links a {
     font-size: 1rem;
     padding: 0.7rem 1.2rem;
+    min-height: 44px;
   }
   
   .theme-btn {
@@ -531,6 +611,231 @@
   
   .theme-btn i {
     font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 360px) {
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .contact-section {
+    padding: 1rem 0.3rem;
+    min-height: 40vh;
+  }
+  
+  .about-image-container {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .profile-image-container {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  
+  .section__text_p1 {
+    font-size: 0.9rem;
+  }
+  
+  .section__text_p2 {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    width: 160px;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+  
+  .nav-button {
+    width: 140px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+    min-height: 36px;
+  }
+  
+  .nav-text {
+    font-size: 0.65rem;
+  }
+  
+  .nav-progress {
+    width: 50px;
+  }
+  
+  .scroll-dots {
+    gap: 0.3rem;
+  }
+  
+  .scroll-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .social-containers {
+    gap: 0.6rem;
+  }
+  
+  .social-icon-container {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .social-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .contact-card {
+    min-width: 200px;
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.6rem;
+  }
+  
+  .contact-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-link {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+  
+  .project-image-container {
+    height: 160px;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-title {
+    font-size: 0.95rem;
+  }
+  
+  .project-description {
+    font-size: 0.8rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+  }
+  
+  .skill-item {
+    padding: 0.8rem;
+  }
+  
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .skill-icon .icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .card-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .card-icon .icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .details-containers {
+    padding: 1.2rem;
+  }
+  
+  .text-container {
+    padding: 1.2rem;
+  }
+  
+  .text-container p {
+    font-size: 0.85rem;
+  }
+  
+  /* Ultra Simplified Footer for Mobile Small */
+  .footer-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .footer-section nav {
+    margin-bottom: 0.6rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.6rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-1px);
+  }
+  
+  .footer-text {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .hamburger-nav {
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .menu-links a {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    min-height: 40px;
+  }
+  
+  .theme-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .theme-btn i {
+    font-size: 0.8rem;
   }
 }
 
@@ -572,6 +877,27 @@
   
   .social-containers {
     margin-top: 1rem;
+  }
+  
+  /* Simplified Footer for Landscape */
+  .footer-section {
+    padding: 1.5rem 2rem;
+  }
+  
+  .footer-section nav {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    min-height: 36px;
   }
 }
 
@@ -668,9 +994,40 @@
     color: black !important;
     -webkit-text-fill-color: black !important;
   }
-} 
+}
 
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav-button,
+  .nav-links a,
+  .social-icon-container,
+  .contact-card,
+  .project-card {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  .btn:hover,
+  .nav-button:hover,
+  .nav-links a:hover,
+  .social-icon-container:hover,
+  .contact-card:hover,
+  .project-card:hover {
+    transform: none;
+  }
+  
+  .btn:active,
+  .nav-button:active,
+  .nav-links a:active,
+  .social-icon-container:active,
+  .contact-card:active,
+  .project-card:active {
+    transform: scale(0.98);
+  }
+}
 
+/* Legacy Mobile Support */
 @media screen and (max-width: 600px) {
     #contact,
     footer {
@@ -724,5 +1081,5 @@
     .text-container {
       text-align: justify;
     }
-  }
+  } 
   
