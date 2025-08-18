@@ -4,373 +4,518 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nambi Raja - Web Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">NAMBI RAJA</div>
-        <div class="nav-links-container">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+        <div class="logo">
+            <span class="logo-text">NAMBI RAJA</span>
+            <div class="logo-underline"></div>
+        </div>
+        <div class="nav-right">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li> <a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li> <a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#project" class="nav-link" data-section="project">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
-        </div>
-        <div class="theme-switcher">
-            <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
-        </div>
-    </nav>
-    <nav class="hamburger-nav">
-        <div class="logo">NAMBI RAJA</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-                <li> <a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li> <a href="#project" onclick="toggleMenu()">Project</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
     </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="RAJA 's profile picture">
+
+    <!-- Mobile Navigation -->
+    <nav class="hamburger-nav" data-aos="fade-down" data-aos-duration="1000">
+        <div class="logo">
+            <span class="logo-text">NAMBI RAJA</span>
         </div>
-        <div class="section__text">
-            <p class="section__text_p1">Hello, I'm</p>
-            <h1 class="title">Nambi Raja</h1>
+        <div class="mobile-nav-right">
+            <button id="theme-toggle-mobile" class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="section__pic-container" data-aos="fade-right" data-aos-duration="1200">
+            <div class="profile-image-container">
+                <img src="./assets/profile-pic.png" alt="Nambi Raja's profile picture" class="profile-image">
+                <div class="profile-glow"></div>
+            </div>
+        </div>
+        <div class="section__text" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+            <p class="section__text_p1 typing-text">Hello, I'm</p>
+            <h1 class="title gradient-text">Nambi Raja</h1>
             <p class="section__text_p2">Web Developer</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Nambiraja M_CV.pdf')">Download
-                    CV</button>
-
-                <button class="btn btn-color-1" onclick="location.href='index.html#contact'">Contact Info</button>
+                <button class="btn btn-color-2 btn-animated" onclick="window.open('./assets/Nambiraja M_CV.pdf')">
+                    <span>Download CV</span>
+                    <i class="fa-solid fa-download"></i>
+                </button>
+                <button class="btn btn-color-1 btn-animated" onclick="location.href='#contact'">
+                    <span>Contact Info</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
-
             <div class="social-containers">
-                <img src="./assets/linkedin.png" alt="My linkedin profile" class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/nambi-raja/'">
-
-                <img src="./assets/github.png" alt="My github profile" class="icon"
-                    onclick="location.href='https://github.com/NAMBIRAJA-M'">
-
-
+                <div class="social-icon-container" onclick="location.href='https://www.linkedin.com/in/nambi-raja/'">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon social-icon">
+                    <div class="social-hover-effect"></div>
+                </div>
+                <div class="social-icon-container" onclick="location.href='https://github.com/NAMBIRAJA-M'">
+                    <img src="./assets/github.png" alt="My GitHub profile" class="icon social-icon">
+                    <div class="social-hover-effect"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dots">
+                <div class="scroll-dot active" data-section="home"></div>
+                <div class="scroll-dot" data-section="about"></div>
+                <div class="scroll-dot" data-section="experience"></div>
+                <div class="scroll-dot" data-section="project"></div>
+                <div class="scroll-dot" data-section="contact"></div>
             </div>
         </div>
     </section>
-    <section id="about">
-        <p class="section__text_p1">Get to Know More</p>
-        <h1 class="title">About me</h1>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+            <p class="section__text_p1">Get to Know More</p>
+            <h1 class="title gradient-text">About Me</h1>
+        </div>
         <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/about-pic-1.png" alt="about-pic" class="about-pic">
+            <div class="section__pic-container" data-aos="fade-right" data-aos-duration="1000">
+                <div class="about-image-container">
+                    <img src="./assets/about-pic-1.png" alt="About me" class="about-pic">
+                    <div class="about-image-glow"></div>
+                </div>
             </div>
-            <div class="about-details-containers">
+            <div class="about-details-containers" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                 <div class="about-containers">
-                    <div class="details-containers">
-                        <img src="./assets/experience.png" alt="experience-icon" class="icon">
+                    <div class="details-containers glass-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="card-icon">
+                            <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                        </div>
                         <h3>Hands on Experience</h3>
                         <p>2+ years<br> Web Developer</p>
                     </div>
-                    <div class="details-containers">
-                        <img src="./assets/education.png" alt="education-icon" class="icon">
+                    <div class="details-containers glass-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                        <div class="card-icon">
+                            <img src="./assets/education.png" alt="Education icon" class="icon">
+                        </div>
                         <h3>Education</h3>
-                        <p> B.E Computer Science And <br>Engineering </p>
+                        <p>B.E Computer Science And<br>Engineering</p>
                     </div>
                 </div>
-                <div class="text-container">
-                <p>I Am Computer Science And Engineering Student .I'm a passionate Web Developer with a B.E. in Computer Science and Engineering.
-                    I specialize in building responsive, user-friendly, and performance-optimized applications.
-                    My experience includes internships at Green Bowl and Menucards, where I worked with React.js, Node.js, Express.js, PostgreSQL, and MongoDB.
-                    I believe in creating solutions that merge functionality with an effortless user experience.
-                    I’m committed to continuous learning and contributing meaningfully to every project.
-                    Beyond coding, I enjoy exploring design trends and listening to Tamil melodies by A.R. Rahman and Harris Jayaraj.
-                    My goal is to grow into a skilled Full Stack Developer delivering impactful digital experiences.</p>                 
+                <div class="text-container glass-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                    <p>I Am Computer Science And Engineering Student. I'm a passionate Web Developer with a B.E. in Computer Science and Engineering.
+                        I specialize in building responsive, user-friendly, and performance-optimized applications.
+                        My experience includes internships at Green Bowl and Menucards, where I worked with React.js, Node.js, Express.js, PostgreSQL, and MongoDB.
+                        I believe in creating solutions that merge functionality with an effortless user experience.
+                        I'm committed to continuous learning and contributing meaningfully to every project.
+                        Beyond coding, I enjoy exploring design trends and listening to Tamil melodies by A.R. Rahman and Harris Jayaraj.
+                        My goal is to grow into a skilled Full Stack Developer delivering impactful digital experiences.</p>
                 </div>
             </div>
-            <img src="./assets/arrow.png" alt="arrow img" class="icon arrow"
-                onclick="location.href='index.html#experience'">
+        </div>
+        <div class="section-navigator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
+            <div class="nav-indicator">
+                <span class="nav-text">Next: Experience</span>
+                <div class="nav-progress">
+                    <div class="nav-progress-bar"></div>
+                </div>
+            </div>
+            <button class="nav-button" onclick="scrollToSection('experience')">
+                <span>Experience</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
     </section>
-    <section id="experience">
-        <p class="section__text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+            <p class="section__text_p1">Explore My</p>
+            <h1 class="title gradient-text">Experience</h1>
+        </div>
         <div class="experience-details-container">
             <div class="about-containers">
-                <div class="details-containers">
+                <div class="details-containers glass-card" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="experience-sub-title">Frontend Development</h2>
                     <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Html</h3>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>HTML</h3>
                                 <p>Experienced</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="90"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
                                 <h3>CSS</h3>
                                 <p>Experienced</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="85"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Java Script</h3>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>JavaScript</h3>
                                 <p>Intermediate</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="75"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>JQuery</h3>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>React.js</h3>
                                 <p>Intermediate</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="70"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>React Js</h3>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>TypeScript</h3>
                                 <p>Intermediate</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="65"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Bootstrap</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Material UI</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Type Script</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-
                     </div>
                 </div>
-                <div class="details-containers">
+                <div class="details-containers glass-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                     <h2 class="experience-sub-title">Backend Development</h2>
                     <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>Node.js</h3>
+                                <p>Intermediate</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="75"></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>Express.js</h3>
+                                <p>Experienced</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="80"></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
                                 <h3>PostgreSQL</h3>
                                 <p>Intermediate</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="70"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Mongo Db</h3>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>MongoDB</h3>
                                 <p>Basic</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="60"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Node Js</h3>
+                        <article class="skill-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+                            <div class="skill-icon">
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            </div>
+                            <div class="skill-content">
+                                <h3>Git & GitHub</h3>
                                 <p>Intermediate</p>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="75"></div>
+                                </div>
                             </div>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Embeded Js</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Express Js</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-
-
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>Git & Github</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-
-                            <div>
-                                <h3>REST API</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-
                     </div>
                 </div>
-
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="arrow img" class="icon arrow" onclick="location.href='index.html#project'">
-
-    </section>
-    <section id="project">
-        <p class="section__text_p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-containers color-container">
-                    <div class="article-container">
-                        <img src="./assets/menucards.jpg" alt="project-1" class="project-img">   
-                    </div>
-                    <h2 class="experience-sub-title project-title">Menucards-Dynamic Profile</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/teamMenuCards/menucard-customer-frontend'">Github</button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://www.menu-cards.com/restaurant/cafe-cadell'">Live
-                            Demo</button>
-
-                    </div>
-
-
-
+        <div class="section-navigator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
+            <div class="nav-indicator">
+                <span class="nav-text">Next: Projects</span>
+                <div class="nav-progress">
+                    <div class="nav-progress-bar"></div>
                 </div>
-                <div class="details-containers color-container">
-                    <div class="article-container">
-                        <img src="./assets/logo_green_bg.jpeg" alt="project-2" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">GreenBowl - (Food Delivery)</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/NAMBIRAJA-M/GreenBowl_server'">Github</button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://greenbowl.onrender.com/'">Live
-                            Demo</button>
-                            </div>
-
-                </div>
-            
-                <div class="details-containers color-container">
-                    <div class="article-container">
-                        <img src="./assets/simongame1.jpg" alt="project-1" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Simon Game</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/NAMBIRAJA-M/javascript-simon_game'">Github</button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href=' https://nambiraja-m.github.io/javascript-simon_game/'">Live
-                            Demo</button>
-
-                    </div>
-
-
-
-                </div>
-                
-
-                </div>
-                
             </div>
-        </div>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-containers color-container">
-                    <div class="article-container">
-                        <img src="./assets/drumkit.jpg" alt="project-4" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Drum kit</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/NAMBIRAJA-M/javascript-drum_kit'">Github</button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href=' https://nambiraja-m.github.io/javascript-drum_kit/'">Live
-                            Demo</button>
-
-                    </div>
-                </div>
-                <div class="details-containers color-container">
-                    <div class="article-container">
-                        <img src="./assets/Travelt.jpg" alt="project-5" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Travel Tracker</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/NAMBIRAJA-M/Travel-Trackers'">Github</button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://travel-trackers.onrender.com/'">Live
-                            Demo</button>
-
-                    </div>
-               
-            </div>
-        </div>
- <img src="./assets/arrow.png" alt="arrow img" class="icon arrow" onclick="location.href='index.html#contact'">
-
-    </section>
-    <section id="contact">
-        <p class="section__text_p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-containers">
-                <img src="./assets/email.png" alt="email" class="icon contact-icon email-icon">
-                <p><a href="mailto:nambirajam21112003@gmail.com">nambirajam21112003@gmail.com</a></p>
-            </div>
-
-            <div class="contact-info-containers">
-                <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon">
-                <p><a href="https://www.linkedin.com/in/nambi-raja/">Linkedin</a></p>
-            </div>
+            <button class="nav-button" onclick="scrollToSection('project')">
+                <span>Projects</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
         </div>
     </section>
-    <footer>
+
+    <!-- Projects Section -->
+    <section id="project" class="projects-section">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+            <p class="section__text_p1">Browse My Recent</p>
+            <h1 class="title gradient-text">Projects</h1>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="project-image-container">
+                    <img src="./assets/menucards.jpg" alt="Menucards Project" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/teamMenuCards/menucard-customer-frontend" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.menu-cards.com/restaurant/cafe-cadell" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Menucards - Dynamic Profile</h2>
+                    <p class="project-description">A dynamic restaurant menu system with real-time updates and interactive features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">RTK Query</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="project-image-container">
+                    <img src="./assets/logo_green_bg.jpeg" alt="GreenBowl Project" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/NAMBIRAJA-M/GreenBowl_server" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://greenbowl.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">GreenBowl - Food Delivery</h2>
+                    <p class="project-description">A comprehensive food delivery platform with order management and payment integration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div class="project-image-container">
+                    <img src="./assets/simongame1.jpg" alt="Simon Game Project" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/NAMBIRAJA-M/javascript-simon_game" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://nambiraja-m.github.io/javascript-simon_game/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Simon Game</h2>
+                    <p class="project-description">An interactive memory game with sound effects and progressive difficulty levels.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                <div class="project-image-container">
+                    <img src="./assets/drumkit.jpg" alt="Drum Kit Project" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/NAMBIRAJA-M/javascript-drum_kit" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://nambiraja-m.github.io/javascript-drum_kit/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Drum Kit</h2>
+                    <p class="project-description">An interactive virtual drum kit with keyboard controls and visual feedback.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Web Audio API</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                <div class="project-image-container">
+                    <img src="./assets/Travelt.jpg" alt="Travel Tracker Project" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/NAMBIRAJA-M/Travel-Trackers" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://travel-trackers.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Travel Tracker</h2>
+                    <p class="project-description">A travel planning and tracking application with location-based features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-navigator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200">
+            <div class="nav-indicator">
+                <span class="nav-text">Next: Contact</span>
+                <div class="nav-progress">
+                    <div class="nav-progress-bar"></div>
+                </div>
+            </div>
+            <button class="nav-button" onclick="scrollToSection('contact')">
+                <span>Contact</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+            <p class="section__text_p1">Get in Touch</p>
+            <h1 class="title gradient-text">Contact Me</h1>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info-upper-container glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="contact-info-containers contact-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                    <div class="contact-icon-wrapper">
+                        <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon">
+                        <div class="contact-icon-glow"></div>
+                    </div>
+                    <p><a href="mailto:nambirajam21112003@gmail.com" class="contact-link">nambirajam21112003@gmail.com</a></p>
+                </div>
+                <div class="contact-info-containers contact-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+                    <div class="contact-icon-wrapper">
+                        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon">
+                        <div class="contact-icon-glow"></div>
+                    </div>
+                    <p><a href="https://www.linkedin.com/in/nambi-raja/" target="_blank" class="contact-link">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section" data-aos="fade-up" data-aos-duration="800">
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li> <a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li> <a href="#project">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="#experience" class="footer-link">Experience</a></li>
+                    <li><a href="#project" class="footer-link">Projects</a></li>
+                    <li><a href="#contact" class="footer-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169; 2024 NambiRaja. All Rights Reserved.</p>
+        <p class="footer-text">Copyright © 2025 Nambi Raja. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="index.js"></script>
 </body>
 

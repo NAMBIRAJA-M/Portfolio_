@@ -1,55 +1,677 @@
-@media screen and (max-width: 1300px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap:wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop */
+@media screen and (max-width: 1400px) {
+  .hero-section {
+    padding: 2rem 4rem;
+  }
+  
+  .section-container {
+    max-width: 1100px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* Desktop */
+@media screen and (max-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero-section {
+    padding: 2rem;
+  }
+  
+  .section-container {
+    max-width: 900px;
+    gap: 3rem;
+  }
+  
+  .about-image-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .profile-image-container {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .article-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .contact-section {
+    padding: 2rem 1rem;
+    min-height: 60vh;
+  }
+  
+  .section-container {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+  }
+  
+  .about-image-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .profile-image-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .section__text_p2 {
+    font-size: 1.3rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  
+  .contact-card {
+    min-width: 280px;
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 220px;
+    justify-content: center;
+  }
+  
+  .nav-button {
+    width: 200px;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-text {
+    font-size: 0.8rem;
+  }
+  
+  .nav-progress {
+    width: 80px;
+  }
+  
+  .social-containers {
+    gap: 1rem;
+  }
+  
+  .social-icon-container {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .article-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-item {
+    padding: 1.2rem;
+  }
+  
+  .about-containers {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .details-containers {
+    min-width: auto;
+  }
+  
+  .floating-shapes {
+    display: none;
+  }
+  
+  .section-navigator {
+    margin-top: 2rem;
+  }
+  
+  .scroll-dots {
+    gap: 0.6rem;
+  }
+  
+  .scroll-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile Large */
+@media screen and (max-width: 600px) {
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .contact-section {
+    padding: 2rem 0.8rem;
+    min-height: 50vh;
+  }
+  
+  .about-image-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .profile-image-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  .section__text_p1 {
+    font-size: 1rem;
+  }
+  
+  .section__text_p2 {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    width: 200px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-button {
+    width: 180px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-text {
+    font-size: 0.75rem;
+  }
+  
+  .nav-progress {
+    width: 70px;
+  }
+  
+  .scroll-dots {
+    gap: 0.5rem;
+  }
+  
+  .scroll-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .social-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-card {
+    min-width: 250px;
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .contact-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contact-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .contact-link {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+  
+  .project-image-container {
+    height: 200px;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .skill-content h3 {
+    font-size: 1rem;
+  }
+  
+  .skill-content p {
+    font-size: 0.8rem;
+  }
+  
+  .text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .footer-section {
+    padding: 2rem 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    font-size: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .hamburger-nav {
+    padding: 0.8rem 1rem;
+  }
+  
+  .menu-links a {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 480px) {
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section {
+    padding: 2rem 0.8rem;
+  }
+  
+  .contact-section {
+    padding: 2rem 0.5rem;
+    min-height: 45vh;
+  }
+  
+  .about-image-container {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .profile-image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .section__text_p2 {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    width: 180px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-button {
+    width: 160px;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav-text {
+    font-size: 0.7rem;
+  }
+  
+  .nav-progress {
+    width: 60px;
+  }
+  
+  .scroll-dots {
+    gap: 0.4rem;
+  }
+  
+  .scroll-dot {
+    width: 7px;
+    height: 7px;
+  }
+  
+  .social-containers {
+    gap: 0.8rem;
+  }
+  
+  .social-icon-container {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .contact-card {
+    min-width: 220px;
+    padding: 1.2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .contact-icon-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .contact-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .contact-link {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+  
+  .project-image-container {
+    height: 180px;
+  }
+  
+  .project-content {
+    padding: 1.2rem;
+  }
+  
+  .project-title {
+    font-size: 1rem;
+  }
+  
+  .project-description {
+    font-size: 0.85rem;
+  }
+  
+  .skill-item {
+    padding: 1rem;
+  }
+  
+  .skill-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .skill-icon .icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .card-icon .icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .details-containers {
+    padding: 1.5rem;
+  }
+  
+  .text-container {
+    padding: 1.5rem;
+  }
+  
+  .text-container p {
+    font-size: 0.9rem;
+  }
+  
+  .footer-section {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .nav-links {
+    gap: 0.8rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .hamburger-nav {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .menu-links a {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+  
+  .theme-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .theme-btn i {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape Mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .about-section,
+  .experience-section,
+  .projects-section {
+    min-height: auto;
+    padding: 2rem;
+  }
+  
+  .profile-image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .section__text_p2 {
+    font-size: 1.2rem;
+  }
+  
+  .btn-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-containers {
+    margin-top: 1rem;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .profile-image,
+  .about-pic,
+  .project-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-shapes,
+  .particle {
+    display: none;
+  }
+  
+  .scroll-arrow-container {
+    animation: none;
+  }
+  
+  .scroll-arrow-btn {
+    animation: none;
+  }
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0f0f23;
+    --text-color: #ffffff;
+    --secondary-text-color: #a1a1aa;
+    --accent-color: #8b5cf6;
+    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --btn-bg-color: #8b5cf6;
+    --btn-text-color: white;
+    --project-bg-color: rgba(255, 255, 255, 0.05);
+    --project-border-color: rgba(139, 92, 246, 0.3);
+    --nav-bg: rgba(15, 15, 35, 0.95);
+    --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .hamburger-nav,
+  .loading-screen,
+  .scroll-indicator,
+  .scroll-arrow-container,
+  .floating-shapes,
+  .particle {
+    display: none !important;
+  }
+  
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section,
+  .contact-section {
+    padding: 0;
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+  
+  .glass-card {
+    background: white !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .btn {
+    border: 1px solid #000 !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .gradient-text {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
 } 
 
 
-@media screen and (max-width:1200px) {
-    .navbar {
-        display: none;
-    }
-
-    .hamburger-nav {
-        display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     #contact,
     footer {
       height: 40vh;
