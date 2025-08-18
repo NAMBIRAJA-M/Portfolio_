@@ -128,12 +128,15 @@ function updateThemeIcon(theme) {
 
 // Skill Bars Animation
 const animateSkillBars = () => {
-    skillBars.forEach(bar => {
+    skillBars.forEach((bar, index) => {
         const level = bar.getAttribute('data-level');
         if (level) {
+            // Reset width to 0 first
+            bar.style.width = '0%';
+            // Animate with staggered delay for each bar
             setTimeout(() => {
                 bar.style.width = `${level}%`;
-            }, 500);
+            }, index * 200); // 200ms delay between each bar
         }
     });
 };
@@ -144,14 +147,53 @@ if (skillSection) {
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateSkillBars();
+                // Add a small delay to ensure the section is fully visible
+                setTimeout(() => {
+                    animateSkillBars();
+                }, 300);
                 skillObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 }); // Reduced threshold for earlier trigger
 
     skillObserver.observe(skillSection);
 }
+
+// Also trigger animation on page load if section is already visible
+document.addEventListener('DOMContentLoaded', () => {
+    const experienceSection = document.querySelector('.experience-section');
+    if (experienceSection) {
+        const rect = experienceSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isVisible) {
+            setTimeout(() => {
+                animateSkillBars();
+            }, 1000);
+        }
+    }
+    
+    // Fallback: Trigger animation after a delay regardless of visibility
+    setTimeout(() => {
+        if (skillBars.length > 0) {
+            const firstBar = skillBars[0];
+            if (firstBar.style.width === '0%' || firstBar.style.width === '') {
+                animateSkillBars();
+            }
+        }
+    }, 3000);
+});
+
+// Additional trigger on window load
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        if (skillBars.length > 0) {
+            const firstBar = skillBars[0];
+            if (firstBar.style.width === '0%' || firstBar.style.width === '') {
+                animateSkillBars();
+            }
+        }
+    }, 2000);
+});
 
 // Parallax Effect for Floating Shapes
 window.addEventListener('scroll', () => {
@@ -497,6 +539,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Manual trigger for skill bars (for testing)
+window.triggerSkillBars = () => {
+    console.log('Manually triggering skill bars animation...');
+    animateSkillBars();
+};
+
 // Console welcome message
 console.log(`
 %c🚀 Welcome to Nambi Raja's Portfolio! 🚀
@@ -506,6 +554,8 @@ console.log(`
 %c
 %cGitHub: https://github.com/NAMBIRAJA-M
 %cLinkedIn: https://www.linkedin.com/in/nambi-raja/
+%c
+%c💡 Tip: Type 'triggerSkillBars()' in console to manually trigger progress bars
 `,
 'color: #6366f1; font-size: 20px; font-weight: bold;',
 '',
@@ -513,5 +563,6 @@ console.log(`
 'color: #666; font-size: 14px;',
 '',
 'color: #6366f1; font-size: 12px;',
-'color: #6366f1; font-size: 12px;'
+'color: #6366f1; font-size: 12px;',
+'color: #10b981; font-size: 12px;'
 );
