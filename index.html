@@ -86,10 +86,6 @@
             <h1 class="title gradient-text">Nambi Raja</h1>
             <p class="section__text_p2">Web Developer</p>
             <div class="btn-container">
-                <button class="btn btn-color-2 btn-animated" onclick="window.open('./assets/Nambiraja M_CV.pdf')">
-                    <span>Download CV</span>
-                    <i class="fa-solid fa-download"></i>
-                </button>
                 <button class="btn btn-color-1 btn-animated" onclick="location.href='#contact'">
                     <span>Contact Info</span>
                     <i class="fa-solid fa-arrow-right"></i>
@@ -104,6 +100,14 @@
                 <div class="social-icon-container" onclick="location.href='https://github.com/NAMBIRAJA-M'">
                     <img src="./assets/github.png" alt="My GitHub profile" class="icon social-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="social-fallback" style="display: none; align-items: center; justify-content: center; width: 100%; height: 100%; color: white; font-weight: bold; font-size: 14px;">GH</div>
+                    <div class="social-hover-effect"></div>
+                </div>
+                <div class="social-icon-container" onclick="location.href='https://www.instagram.com/stubn_heart_/'">
+                    <img src="./assets/insta.png" alt="My Instagram profile" class="icon social-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="social-hover-effect"></div>
+                </div>
+                <div class="social-icon-container" onclick="location.href='https://x.com/stubn_heart_'">
+                    <img src="./assets/x.png" alt="My X profile" class="icon social-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="social-hover-effect"></div>
                 </div>
             </div>
@@ -481,6 +485,7 @@
             <h1 class="title gradient-text">Contact Me</h1>
         </div>
         <div class="contact-container">
+        
             <div class="contact-info-upper-container glass-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <div class="contact-info-containers contact-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
                     <div class="contact-icon-wrapper">
@@ -498,22 +503,53 @@
                 </div>
             </div>
         </div>
+        <button class="scroll-to-top-btn contact-scroll-btn" onclick="scrollToTop()" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </section>
+ 
+
+
 
     <!-- Footer -->
     <footer class="footer-section" data-aos="fade-up" data-aos-duration="800">
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#home" class="footer-link">Home</a></li>
-                    <li><a href="#about" class="footer-link">About</a></li>
-                    <li><a href="#experience" class="footer-link">Experience</a></li>
-                    <li><a href="#project" class="footer-link">Projects</a></li>
-                    <li><a href="#contact" class="footer-link">Contact</a></li>
-                </ul>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section-links">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li><a href="https://www.menu-cards.com/restaurant/cafe-cadell" target="_blank">Menucards</a></li>
+                        <li><a href="https://greenbowl.onrender.com/" target="_blank">GreenBowl</a></li>
+                        <li><a href="https://nambiraja-m.github.io/javascript-simon_game/" target="_blank">Simon Game</a></li>
+                        <li><a href="https://nambiraja-m.github.io/javascript-drum_kit/" target="_blank">Drum Kit</a></li>
+                        <li><a href="https://travel-trackers.onrender.com/" target="_blank">Travel Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section-links">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/nambi-raja/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/NAMBIRAJA-M" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/stubn_heart_/" target="_blank">Instagram</a></li>
+                        <li><a href="https://x.com/stubn_heart_" target="_blank">X (Twitter)</a></li>
+                        <li><a href="mailto:nambirajam21112003@gmail.com">Email</a></li>
+                    </ul>
+                </div>
             </div>
-        </nav>
-        <p class="footer-text">Copyright © 2025 Nambi Raja. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p class="footer-text">Copyright © 2025 Nambi Raja. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Scripts -->

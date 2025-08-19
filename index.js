@@ -335,6 +335,14 @@ function scrollToSection(sectionId) {
     }
 }
 
+// Scroll to Top Function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 // Scroll Dots Navigation
 document.querySelectorAll('.scroll-dot').forEach(dot => {
     dot.addEventListener('click', function() {

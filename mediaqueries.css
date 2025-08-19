@@ -71,6 +71,7 @@
   
   .contact-section {
     padding: 2rem 1rem;
+    
   }
   
   .section-container {
@@ -91,10 +92,27 @@
   
   .title {
     font-size: 2.5rem;
+    margin-bottom: 1.8rem;
   }
   
   .section__text_p2 {
     font-size: 1.3rem;
+  }
+  
+  .section__text_p1 {
+    margin-bottom: 1.2rem;
+  }
+  
+  .contact-section .section-header {
+    margin-bottom: 0rem;
+  }
+  
+  .contact-section .section__text_p1 {
+    margin-bottom: 1.8rem;
+  }
+  
+  .contact-section .title {
+    margin-bottom: 2rem;
   }
   
   .projects-grid {
@@ -115,6 +133,14 @@
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+  }
+  
+  .contact-scroll-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    right: 1rem;
+    bottom: 1rem;
   }
   
   .btn-container {
@@ -144,7 +170,7 @@
   }
   
   .social-containers {
-    gap: 1rem;
+    gap: 1.2rem;
   }
   
   .social-icon-container {
@@ -189,31 +215,31 @@
   
   /* Enhanced Footer for Tablet */
   .footer-section {
-    padding: 3rem 1.5rem 2rem;
+    padding: 2rem 1rem;
   }
   
-  .footer-section nav {
-    margin-bottom: 2rem;
+  .footer-content {
+    gap: 1.5rem;
   }
   
-  .footer-section .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 500px;
+  .footer-links {
+    gap: 2rem;
   }
   
-  .footer-section .nav-links a {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .footer-section-links {
+    min-width: 150px;
+  }
+  
+  .footer-section-links h3 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-section-links a {
+    font-size: 0.9rem;
   }
   
   .footer-text {
-    padding: 1.2rem;
+    padding: 1rem;
     font-size: 0.9rem;
   }
 }
@@ -233,6 +259,18 @@
     min-height: 50vh;
   }
   
+  .contact-section .section-header {
+    margin-bottom: 0rem;
+  }
+  
+  .contact-section .section__text_p1 {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-section .title {
+    margin-bottom: 2.5rem;
+  }
+  
   .about-image-container {
     width: 250px;
     height: 250px;
@@ -246,10 +284,12 @@
   .title {
     font-size: 2rem;
     line-height: 1.3;
+    margin-bottom: 2rem;
   }
   
   .section__text_p1 {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .section__text_p2 {
@@ -288,13 +328,13 @@
   }
   
   .social-icon-container {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   
   .social-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
   
   .contact-card {
@@ -308,6 +348,14 @@
   .contact-icon-wrapper {
     width: 50px;
     height: 50px;
+  }
+  
+  .contact-scroll-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    right: 0.8rem;
+    bottom: 0.8rem;
   }
   
   .contact-icon {
@@ -356,41 +404,34 @@
   
   /* Enhanced Footer for Mobile Large */
   .footer-section {
-    padding: 2.5rem 1rem 2rem;
+    padding: 1.5rem 0.8rem;
   }
   
-  .footer-section nav {
-    margin-bottom: 1.5rem;
+  .footer-content {
+    gap: 1.2rem;
   }
   
-  .footer-section .nav-links {
+  .footer-links {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1.5rem;
     text-align: center;
-    max-width: 300px;
   }
   
-  .footer-section .nav-links a {
+  .footer-section-links {
+    min-width: auto;
+    text-align: center;
+  }
+  
+  .footer-section-links h3 {
     font-size: 1rem;
-    padding: 0.8rem 1rem;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--border-radius-sm);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
   }
   
-  .footer-section .nav-links a:hover {
-    background: var(--accent-gradient);
-    color: white;
-    transform: translateY(-2px) scale(1.02);
+  .footer-section-links a {
+    font-size: 0.85rem;
   }
   
   .footer-text {
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 0.85rem;
     max-width: 300px;
   }
@@ -422,6 +463,7 @@
   .contact-section {
     padding: 1.5rem 0.5rem;
     min-height: 45vh;
+    margin-top: 10rem;
   }
   
   .about-image-container {
@@ -437,6 +479,23 @@
   .title {
     font-size: 1.8rem;
     line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section__text_p1 {
+    margin-bottom: 1.2rem;
+  }
+  
+  .contact-section .section-header {
+    margin-bottom: 0rem;
+  }
+  
+  .contact-section .section__text_p1 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-section .title {
+    margin-bottom: 1.8rem;
   }
   
   .section__text_p2 {
@@ -491,6 +550,17 @@
   .contact-card {
     min-width: 220px;
     padding: 1.2rem;
+  }
+  
+  .contact-scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  
+  .contact-card {
     flex-direction: column;
     text-align: center;
     gap: 0.8rem;
@@ -565,43 +635,36 @@
   
   /* Enhanced Footer for Mobile Medium */
   .footer-section {
-    padding: 2rem 0.8rem 1.5rem;
+    padding: 1rem 0.5rem;
   }
   
-  .footer-section nav {
-    margin-bottom: 1.2rem;
+  .footer-content {
+    gap: 1rem;
   }
   
-  .footer-section .nav-links {
+  .footer-links {
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1.2rem;
     text-align: center;
-    max-width: 280px;
   }
   
-  .footer-section .nav-links a {
+  .footer-section-links {
+    min-width: auto;
+    text-align: center;
+  }
+  
+  .footer-section-links h3 {
     font-size: 0.95rem;
-    padding: 0.7rem 0.8rem;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--border-radius-sm);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
   }
   
-  .footer-section .nav-links a:hover {
-    background: var(--accent-gradient);
-    color: white;
-    transform: translateY(-1px) scale(1.01);
+  .footer-section-links a {
+    font-size: 0.8rem;
   }
   
   .footer-text {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-size: 0.8rem;
-    padding: 0.8rem;
+    padding: 0.6rem;
     max-width: 280px;
   }
   
@@ -628,7 +691,9 @@
     font-size: 0.9rem;
   }
 }
-
+.scroll-indicator{
+  display: none;
+}
 /* Mobile Small */
 @media screen and (max-width: 360px) {
   .hero-section,
@@ -641,6 +706,7 @@
   .contact-section {
     padding: 1rem 0.3rem;
     min-height: 40vh;
+    margin-top: 10rem;
   }
   
   .about-image-container {
@@ -656,6 +722,24 @@
   .title {
     font-size: 1.6rem;
     line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+  
+  .section__text_p1 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section .section-header {
+    margin-bottom: 0rem;
+  }
+  
+  .contact-section .section__text_p1 {
+    margin-bottom: 1.2rem;
+  }
+  
+  .contact-section .title {
+    margin-bottom: 1.5rem;
   }
   
   .section__text_p1 {
@@ -722,6 +806,14 @@
   .contact-icon-wrapper {
     width: 40px;
     height: 40px;
+  }
+  
+  .contact-scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    right: 0.3rem;
+    bottom: 0.3rem;
   }
   
   .contact-icon {
@@ -793,43 +885,36 @@
   
   /* Enhanced Footer for Mobile Small */
   .footer-section {
-    padding: 1.5rem 0.5rem 1rem;
+    padding: 0.8rem 0.3rem;
   }
   
-  .footer-section nav {
-    margin-bottom: 1rem;
+  .footer-content {
+    gap: 0.8rem;
   }
   
-  .footer-section .nav-links {
+  .footer-links {
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 1rem;
     text-align: center;
-    max-width: 250px;
   }
   
-  .footer-section .nav-links a {
+  .footer-section-links {
+    min-width: auto;
+    text-align: center;
+  }
+  
+  .footer-section-links h3 {
     font-size: 0.9rem;
-    padding: 0.6rem 0.6rem;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--border-radius-sm);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
   }
   
-  .footer-section .nav-links a:hover {
-    background: var(--accent-gradient);
-    color: white;
-    transform: translateY(-1px) scale(1.01);
+  .footer-section-links a {
+    font-size: 0.75rem;
   }
   
   .footer-text {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     font-size: 0.75rem;
-    padding: 0.6rem;
+    padding: 0.5rem;
     max-width: 250px;
   }
   
@@ -856,7 +941,9 @@
     font-size: 0.8rem;
   }
 }
-
+.scroll-indicator{
+  display: none;
+}
 /* Landscape Mobile */
 @media screen and (max-height: 600px) and (orientation: landscape) {
   .hero-section {
@@ -899,24 +986,21 @@
   
   /* Simplified Footer for Landscape */
   .footer-section {
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 0.1rem 0.1rem;
   }
   
-  .footer-section nav {
-    margin-bottom: 1rem;
-  }
-  
-  .nav-links {
-    flex-direction: row;
-    justify-content: center;
+  .footer-content {
     gap: 1rem;
   }
   
-  .nav-links a {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.8rem;
-    min-height: 36px;
+  .contact-scroll-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
   }
+
 }
 
 /* High DPI Displays */
