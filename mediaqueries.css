@@ -636,8 +636,12 @@
   /* Enhanced Footer for Mobile Medium */
   .footer-section {
     padding: 1rem 0.5rem;
+    margin-top: 10rem;
+    overflow:scroll;
   }
-  
+  .footer-bottom{
+    margin-bottom: 3rem;
+  }
   .footer-content {
     gap: 1rem;
   }
@@ -658,6 +662,7 @@
   }
   
   .footer-section-links a {
+
     font-size: 0.8rem;
   }
   
@@ -885,7 +890,13 @@
   
   /* Enhanced Footer for Mobile Small */
   .footer-section {
+    overflow:scroll;    
+    margin-top: 10rem;
     padding: 0.8rem 0.3rem;
+    margin-top: 10rem;
+  }
+  .footer-bottom{
+    margin-bottom: 3rem;
   }
   
   .footer-content {
